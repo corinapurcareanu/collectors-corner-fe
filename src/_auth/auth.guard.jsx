@@ -1,6 +1,6 @@
-import { Route, Redirect, useNavigate, useMemo } from 'react-router-dom';
+import { Route, Redirect, useNavigate } from 'react-router-dom';
 import { UserAuthComponent } from './user.auth';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 
 const PrivateRoute = ({ role, element: Element, ...rest }) => {
   const userAuth = useMemo(() => new UserAuthComponent(), []);
