@@ -3,7 +3,7 @@ import { UserAuthComponent } from './user.auth';
 import { useEffect } from 'react';
 
 const PrivateRoute = ({ role, element: Element, ...rest }) => {
-  const userAuth =  new UserAuthComponent();
+  const userAuth = useMemo(() => new UserAuthComponent(), []);
   const navigate = useNavigate();
 
   useEffect(() => {
