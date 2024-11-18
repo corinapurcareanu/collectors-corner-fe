@@ -1,24 +1,25 @@
 import {React} from "react"
 import './header.css';
 import { Link, useLocation } from 'react-router-dom';
-import UserAuthComponent from '../../_auth/user.auth';
-import { useNavigate } from 'react-router-dom';
-import { useState , useEffect, useCallback} from 'react';
-import ProductService from "../../_services/product.service";
+// import UserAuthComponent from '../../_auth/user.auth';
+// import { useNavigate } from 'react-router-dom';
+import { useState} from 'react';
+//  , useEffect, useCallback} from 'react';
+// import ProductService from "../../_services/product.service";
 import logoImage from '../../img/collectors-corner.jpeg';
 
 
 export const Header = ({cartCount, setCartCount}) => {
     const location = useLocation();
     const [key, setKey] = useState('');
-    const userAuthService = new UserAuthComponent();
-    const navigate = useNavigate();
+    // const userAuthService = new UserAuthComponent();
+    // const navigate = useNavigate();
 
-    const handleLogout = () => {
-        userAuthService.clear();
-        setCartCount(0);
-        navigate('/');
-    };
+    // const handleLogout = () => {
+    //     userAuthService.clear();
+    //     setCartCount(0);
+    //     navigate('/');
+    // };
 
     const searchByKeyword = (event) => {
         event.preventDefault();

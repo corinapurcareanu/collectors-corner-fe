@@ -2,89 +2,89 @@
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {Header} from "./components/header/header";
-import { Login } from './components/login/login';
-import { SignUp } from './components/sign-up/sign-up';
+// import { Login } from './components/login/login';
+// import { SignUp } from './components/sign-up/sign-up';
 import { Home } from './components/home/home';
-import { ViewProductDetails } from './components/view-product-details/view-product-details';
-import { SearchView } from './components/search-view/search-view';
-import { Bath } from './components/products/bath/bath';
-import { BathSalt } from './components/products/bath/pages/bath-salt';
-import { ShowerGel } from './components/products/bath/pages/shower-gel';
-import { ShowerOil } from './components/products/bath/pages/shower-oil';
-import { Soap } from './components/products/bath/pages/soap';
-import { Hair } from './components/products/hair/hair';
-import { Accesories } from './components/products/hair/accesories/accesories';
-import { HairBrush } from './components/products/hair/accesories/pages/hair-brush';
-import { HairPins } from './components/products/hair/accesories/pages/hair-pins';
-import { HairTie } from './components/products/hair/accesories/pages/hair-tie';
-import { HairCare } from './components/products/hair/hair-care/hair-care';
-import { HairBalm } from './components/products/hair/hair-care/pages/hair-balm';
-import { HairMask } from './components/products/hair/hair-care/pages/hair-mask';
-import { HairOil } from './components/products/hair/hair-care/pages/hair-oil';
-import { Shampoo } from './components/products/hair/hair-care/pages/shampoo';
-import { Styling } from './components/products/hair/styling/styling';
-import { HairWax } from './components/products/hair/styling/pages/hair-wax';
-import { HairGel } from './components/products/hair/styling/pages/hair-gel';
-import { HairSpray } from './components/products/hair/styling/pages/hair-spray';
-import { MakeUp } from './components/products/makeup/makeup';
-import { Brushes } from './components/products/makeup/brushes/brushes';
-import { Eyebrows } from './components/products/makeup/eyebrows/eyebrows';
-import { EyebrowsGel } from './components/products/makeup/eyebrows/pages/eyebrows-gel';
-import { EyebrowsPencil} from './components/products/makeup/eyebrows/pages/eyebrows-pencil';
-import { Eyes } from './components/products/makeup/eyes/eyes';
-import { EyePencil} from './components/products/makeup/eyes/pages/eye-pencil';
-import { Eyeliner} from './components/products/makeup/eyes/pages/eyeliner';
-import { Lashes} from './components/products/makeup/eyes/pages/lashes';
-import { Mascara} from './components/products/makeup/eyes/pages/mascara';
-import { Palette} from './components/products/makeup/eyes/pages/palette';
-import { Face } from './components/products/makeup/face/face';
-import { Concelear } from './components/products/makeup/face/pages/concelear';
-import { FacePowder } from './components/products/makeup/face/pages/face-powder';
-import { Foundation } from './components/products/makeup/face/pages/foundation';
-import { Lips } from './components/products/makeup/lips/lips';
-import { Gloss } from './components/products/makeup/lips/pages/gloss';
-import { LipBalm } from './components/products/makeup/lips/pages/lip-balm';
-import { LipPencil } from './components/products/makeup/lips/pages/lip-pencil';
-import { LipStick } from './components/products/makeup/lips/pages/lipstick';
-import { Nails } from './components/products/makeup/nails/nails';
-import { NailBase } from './components/products/makeup/nails/pages/nail-base';
-import { NailPolish } from './components/products/makeup/nails/pages/nail-polish';
-import { TopCoat } from './components/products/makeup/nails/pages/top-coat';
-import { Perfume } from './components/products/perfume/perfume';
-import { ForMen } from './components/products/perfume/for-men/for-men';
-import { EauDePerfume as ManEauDePerfume } from './components/products/perfume/for-men/pages/eau-de-perfume';
-import {EauDeToilette as ManEauDeToilette} from './components/products/perfume/for-men/pages/eau-de-toilette';
-import { ForWomen } from './components/products/perfume/for-women/for-women';
-import {EauDePerfume as WomanEauDePerfume } from './components/products/perfume/for-women/pages/eau-de-perfume';
-import {EauDeToilette as WomanEauDeToilette} from './components/products/perfume/for-women/pages/eau-de-toilette';
-import { Skincare } from './components/products/skincare/skincare';
-import { BodyCare } from './components/products/skincare/body-care/body-care';
-import { BodyCream } from './components/products/skincare/body-care/pages/body-cream';
-import { BodyOil } from './components/products/skincare/body-care/pages/body-oil';
-import { FaceCare } from './components/products/skincare/face-care/face-care';
-import { DayCream } from './components/products/skincare/face-care/pages/day-cream';
-import { NightCream } from './components/products/skincare/face-care/pages/night-cream';
-import { FaceMask } from './components/products/skincare/face-care/pages/face-mask';
-import { FeetCare } from './components/products/skincare/feet-care/feet-care';
-import { HandsCare } from './components/products/skincare/hands-care/hands-care';
-import { AccessForbidden } from './components/access.forbidden/access.forbidden';
-import ProtectedRoutes from './_auth/protected.routes';
+// import { ViewProductDetails } from './components/view-product-details/view-product-details';
+// import { SearchView } from './components/search-view/search-view';
+// import { Bath } from './components/products/bath/bath';
+// import { BathSalt } from './components/products/bath/pages/bath-salt';
+// import { ShowerGel } from './components/products/bath/pages/shower-gel';
+// import { ShowerOil } from './components/products/bath/pages/shower-oil';
+// import { Soap } from './components/products/bath/pages/soap';
+// import { Hair } from './components/products/hair/hair';
+// import { Accesories } from './components/products/hair/accesories/accesories';
+// import { HairBrush } from './components/products/hair/accesories/pages/hair-brush';
+// import { HairPins } from './components/products/hair/accesories/pages/hair-pins';
+// import { HairTie } from './components/products/hair/accesories/pages/hair-tie';
+// import { HairCare } from './components/products/hair/hair-care/hair-care';
+// import { HairBalm } from './components/products/hair/hair-care/pages/hair-balm';
+// import { HairMask } from './components/products/hair/hair-care/pages/hair-mask';
+// import { HairOil } from './components/products/hair/hair-care/pages/hair-oil';
+// import { Shampoo } from './components/products/hair/hair-care/pages/shampoo';
+// import { Styling } from './components/products/hair/styling/styling';
+// import { HairWax } from './components/products/hair/styling/pages/hair-wax';
+// import { HairGel } from './components/products/hair/styling/pages/hair-gel';
+// import { HairSpray } from './components/products/hair/styling/pages/hair-spray';
+// import { MakeUp } from './components/products/makeup/makeup';
+// import { Brushes } from './components/products/makeup/brushes/brushes';
+// import { Eyebrows } from './components/products/makeup/eyebrows/eyebrows';
+// import { EyebrowsGel } from './components/products/makeup/eyebrows/pages/eyebrows-gel';
+// import { EyebrowsPencil} from './components/products/makeup/eyebrows/pages/eyebrows-pencil';
+// import { Eyes } from './components/products/makeup/eyes/eyes';
+// import { EyePencil} from './components/products/makeup/eyes/pages/eye-pencil';
+// import { Eyeliner} from './components/products/makeup/eyes/pages/eyeliner';
+// import { Lashes} from './components/products/makeup/eyes/pages/lashes';
+// import { Mascara} from './components/products/makeup/eyes/pages/mascara';
+// import { Palette} from './components/products/makeup/eyes/pages/palette';
+// import { Face } from './components/products/makeup/face/face';
+// import { Concelear } from './components/products/makeup/face/pages/concelear';
+// import { FacePowder } from './components/products/makeup/face/pages/face-powder';
+// import { Foundation } from './components/products/makeup/face/pages/foundation';
+// import { Lips } from './components/products/makeup/lips/lips';
+// import { Gloss } from './components/products/makeup/lips/pages/gloss';
+// import { LipBalm } from './components/products/makeup/lips/pages/lip-balm';
+// import { LipPencil } from './components/products/makeup/lips/pages/lip-pencil';
+// import { LipStick } from './components/products/makeup/lips/pages/lipstick';
+// import { Nails } from './components/products/makeup/nails/nails';
+// import { NailBase } from './components/products/makeup/nails/pages/nail-base';
+// import { NailPolish } from './components/products/makeup/nails/pages/nail-polish';
+// import { TopCoat } from './components/products/makeup/nails/pages/top-coat';
+// import { Perfume } from './components/products/perfume/perfume';
+// import { ForMen } from './components/products/perfume/for-men/for-men';
+// import { EauDePerfume as ManEauDePerfume } from './components/products/perfume/for-men/pages/eau-de-perfume';
+// import {EauDeToilette as ManEauDeToilette} from './components/products/perfume/for-men/pages/eau-de-toilette';
+// import { ForWomen } from './components/products/perfume/for-women/for-women';
+// import {EauDePerfume as WomanEauDePerfume } from './components/products/perfume/for-women/pages/eau-de-perfume';
+// import {EauDeToilette as WomanEauDeToilette} from './components/products/perfume/for-women/pages/eau-de-toilette';
+// import { Skincare } from './components/products/skincare/skincare';
+// import { BodyCare } from './components/products/skincare/body-care/body-care';
+// import { BodyCream } from './components/products/skincare/body-care/pages/body-cream';
+// import { BodyOil } from './components/products/skincare/body-care/pages/body-oil';
+// import { FaceCare } from './components/products/skincare/face-care/face-care';
+// import { DayCream } from './components/products/skincare/face-care/pages/day-cream';
+// import { NightCream } from './components/products/skincare/face-care/pages/night-cream';
+// import { FaceMask } from './components/products/skincare/face-care/pages/face-mask';
+// import { FeetCare } from './components/products/skincare/feet-care/feet-care';
+// import { HandsCare } from './components/products/skincare/hands-care/hands-care';
+// import { AccessForbidden } from './components/access.forbidden/access.forbidden';
+// import ProtectedRoutes from './_auth/protected.routes';
 import {Footer} from "./components/footer/footer";
 
 import { useState } from 'react';
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
-  const [product, setProduct] = useState('null');
+  // const [product, setProduct] = useState('null');
 
   return (
     <div className="App">
         <Router>
-        <ProtectedRoutes  setCartCount={setCartCount} product={product} setProduct={setProduct}/>
+        {/* <ProtectedRoutes  setCartCount={setCartCount} product={product} setProduct={setProduct}/> */}
           <Header cartCount={cartCount} setCartCount={setCartCount}/>
             <Routes>
               <Route path="/" element={<Home />}/>
-              <Route path="/authenticate" element={<Login setCartCount={setCartCount}/>} />
+              {/* <Route path="/authenticate" element={<Login setCartCount={setCartCount}/>} />
               <Route path="/sign-up" element={<SignUp />} />
               <Route path="/view-product-details/:productId" element={<ViewProductDetails setCartCount={setCartCount}/>} />
               <Route path="/search-view/:key" element={<SearchView />} />
@@ -149,7 +149,7 @@ function App() {
               <Route path="/skin-care/face-care/day-cream" element={<DayCream />}/>
               <Route path="/skin-care/face-care/night-cream" element={<NightCream />}/>
               <Route path="/skin-care/face-care/face-mask" element={<FaceMask />}/>
-              <Route element={<AccessForbidden />} />
+              <Route element={<AccessForbidden />} /> */}
             </Routes>
             <Footer />
         </Router>

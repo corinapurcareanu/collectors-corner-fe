@@ -1,11 +1,11 @@
 import './home.css';
-import { Container, GridList} from '@material-ui/core';
-import UserAuthComponent from '../../_auth/user.auth';
-import ProductService from '../../_services/product.service';
-import { useState, useEffect, useCallback } from 'react';
-import ImageProcessingService from '../../_services/image.processing.service';
-import { ImageListItem } from '@material-ui/core'
-import { useNavigate } from 'react-router-dom';
+import { Container} from '@material-ui/core';
+// import UserAuthComponent from '../../_auth/user.auth';
+// import ProductService from '../../_services/product.service';
+// import { useState, useEffect, useCallback } from 'react';
+// import ImageProcessingService from '../../_services/image.processing.service';
+// import { ImageListItem } from '@material-ui/core'
+// import { useNavigate } from 'react-router-dom';
 import '@material-ui/core/styles';
 
 export const Home = () => {

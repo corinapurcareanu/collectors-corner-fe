@@ -10,9 +10,9 @@ export const Footer = () => {
         <div className="footer-content">
           <p>&copy; 2024 Collectors Corner. All rights reserved.</p>
           <div className="footer-links">
-            <a href="#" className="footer-link">About Us</a>
-            <a href="#" className="footer-link">Contact</a>
-            <a href="#" className="footer-link">Privacy Policy</a>
+            <a href="/" className="footer-link">About Us</a>
+            <a href="/" className="footer-link">Contact</a>
+            <a href="/" className="footer-link">Privacy Policy</a>
           </div>
         </div>
       </footer>
