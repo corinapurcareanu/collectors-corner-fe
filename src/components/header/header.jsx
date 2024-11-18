@@ -5,6 +5,8 @@ import UserAuthComponent from '../../_auth/user.auth';
 import { useNavigate } from 'react-router-dom';
 import { useState , useEffect, useCallback} from 'react';
 import ProductService from "../../_services/product.service";
+import logoImage from '../../img/collectors-corner.jpeg';
+
 
 export const Header = ({cartCount, setCartCount}) => {
     const location = useLocation();
@@ -21,8 +23,8 @@ export const Header = ({cartCount, setCartCount}) => {
     const searchByKeyword = (event) => {
         event.preventDefault();
         console.log(key);
-        navigate(`/search-view/${key}`)
-        setKey('')
+        // navigate(`/search-view/${key}`)
+        // setKey('')
     };
 
     return (
@@ -30,10 +32,10 @@ export const Header = ({cartCount, setCartCount}) => {
         <table>
             <tr>
                 <td align="left">
-                    <span className="store">Beauty Products Store</span>
+                    <img src={logoImage} alt="logo" className="store-logo" />
+                    <span className="store">Collectors Corner</span>
                 </td>
                 <td>
-                    {/* Large windows size */}
                      <form className="search-bar" onSubmit={searchByKeyword}>
                         <input
                             type="text"
@@ -44,12 +46,11 @@ export const Header = ({cartCount, setCartCount}) => {
                             onChange={(event) => setKey(event.target.value)}
                         />
                         <button type="submit">
-                            <svg id="search-logo" xmlns="http://www.w3.org/2000/svg" width="17" height="27" fill="currentColor" className="bi bi-search" viewBox="0 0 16 18"> 
+                            <svg id="search-logo" xmlns="http://www.w3.org/2000/svg" width="17" height="57" fill="currentColor" className="bi bi-search" viewBox="0 0 16 18"> 
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" id="mainIconPathAttribute"></path>
                             </svg>
                         </button>
                         </form>
-                        {/* Small windows size */}
                         <form className="search-bar-small" onSubmit={searchByKeyword}>
                         <input
                             type="text"
@@ -60,7 +61,7 @@ export const Header = ({cartCount, setCartCount}) => {
                             onChange={(event) => setKey(event.target.value)}
                         />
                         <button type="submit">
-                            <svg id="search-logo" xmlns="http://www.w3.org/2000/svg" width="17" height="27" fill="currentColor" className="bi bi-search" viewBox="0 0 16 18"> 
+                            <svg id="search-logo" xmlns="http://www.w3.org/2000/svg" width="17" height="57" fill="currentColor" className="bi bi-search" viewBox="0 0 16 18"> 
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" id="mainIconPathAttribute"></path>
                             </svg>
                         </button>
@@ -71,11 +72,11 @@ export const Header = ({cartCount, setCartCount}) => {
                     <Link to="/">
                     {location.pathname !== '/' ? (
                         <svg id="home-logo" data-name="Logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
-                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" fill="white"></path>
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" fill="#333;"></path>
                         </svg>
                         ) : (
                         <svg id="home-logo-current" data-name="Logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
-                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" fill="white"></path>
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" fill="#333;"></path>
                         </svg>
                         )
                     }
@@ -95,10 +96,10 @@ export const Header = ({cartCount, setCartCount}) => {
                             <rect width="400" height="400" fill="none" />
                             <path
                             d="M8,8a3,3,0,1,0,0-6,3,3,0,0,0,0,6zm2-3a2,2,0,1,1-4,0,2,2,0,0,1,4,0zm4,8c0,1-1,1-1,1H3s-1,0-1-1,1-4,6-4,6,3,6,4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516,10.68,10.289,10,8,10c-2.29,0-3.516.68-4.168,1.332-.678.678-.83,1.418-.832,1.664h10z"
-                            fill="white"
+                            fill="#333;"
                             ></path>
                         </svg>
-                        <div className="dropdown-content">
+                        {/* <div className="dropdown-content">
                             {!userAuthService.isLoggedIn() ? (
                                 <>
                                 <Link to="/authenticate">
@@ -112,18 +113,19 @@ export const Header = ({cartCount, setCartCount}) => {
                             (
                                 <button className="authenticate" onClick={handleLogout}> Log-out </button>
                             )}
-                        </div>
+                        </div> */}
                     </div>
 
-                    <div style={{position: 'relative', display: 'inline-block'}}>
-                        <Link to="cart">
+                    <div style={{position: 'relative', display: 'inline-block', marginRight: '10px'}}>
+                        {/* <Link to="cart"> */}
+                        <Link to="/">
                         {location.pathname !== 'cart' ? (
                             <svg id="shopping-logo" data-name="Logo"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 600 572">
-                                <path d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z" fill="white"></path>
+                                <path d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z" fill="#333;"></path>
                             </svg>
                             ) : (
                             <svg id="shopping-logo-current" data-name="Logo"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 600 572">
-                                <path d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z" fill="white"></path>
+                                <path d="M171.7 191.1H404.3L322.7 35.07C316.6 23.31 321.2 8.821 332.9 2.706C344.7-3.409 359.2 1.167 365.3 12.93L458.4 191.1H544C561.7 191.1 576 206.3 576 223.1C576 241.7 561.7 255.1 544 255.1L492.1 463.5C484.1 492 459.4 512 430 512H145.1C116.6 512 91 492 83.88 463.5L32 255.1C14.33 255.1 0 241.7 0 223.1C0 206.3 14.33 191.1 32 191.1H117.6L210.7 12.93C216.8 1.167 231.3-3.409 243.1 2.706C254.8 8.821 259.4 23.31 253.3 35.07L171.7 191.1zM191.1 303.1C191.1 295.1 184.8 287.1 175.1 287.1C167.2 287.1 159.1 295.1 159.1 303.1V399.1C159.1 408.8 167.2 415.1 175.1 415.1C184.8 415.1 191.1 408.8 191.1 399.1V303.1zM271.1 303.1V399.1C271.1 408.8 279.2 415.1 287.1 415.1C296.8 415.1 304 408.8 304 399.1V303.1C304 295.1 296.8 287.1 287.1 287.1C279.2 287.1 271.1 295.1 271.1 303.1zM416 303.1C416 295.1 408.8 287.1 400 287.1C391.2 287.1 384 295.1 384 303.1V399.1C384 408.8 391.2 415.1 400 415.1C408.8 415.1 416 408.8 416 399.1V303.1z" fill="#333;"></path>
                             </svg>
                             )
                         }
@@ -137,9 +139,8 @@ export const Header = ({cartCount, setCartCount}) => {
                 </td>
             </tr>
 
-            <tr>
+        {/*    <tr>
                 <td align="left">
-                    {/* Large window size */}
                 <div className="products">
                     <div className="dropdown">
                     <Link to="/make-up">
@@ -339,10 +340,9 @@ export const Header = ({cartCount, setCartCount}) => {
                     
                 </div>
 
-                 {/* Small window size */}
                  <div className="small-dropdown">
                     <svg id="menu-logo" data-name="Logo" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" className="bi bi-person" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" fill="white"></path>
+                        <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" fill="#333;"></path>
                     </svg>
                     <div className="small-dropdown-content">
                         <div className="products-small">
@@ -580,7 +580,7 @@ export const Header = ({cartCount, setCartCount}) => {
                 )}
                 </td>
                 <td></td>
-            </tr>
+            </tr> */}
         </table>
     </div>
     );

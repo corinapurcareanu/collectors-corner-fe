@@ -9,64 +9,78 @@ import { useNavigate } from 'react-router-dom';
 import '@material-ui/core/styles';
 
 export const Home = () => {
-    const [productDetails, setProductDetails] = useState([]);
-    const userAuthService = new UserAuthComponent();
-    const [showPreviousPageButton, setShowPreviousPageButton] = useState(false);
-    const [showNextPageButton, setShowNextPageButton] = useState(false);
-    const [showPageNumber, setShowPageNumber] = useState(true);
-    const [pageNumber, setPageNumber] = useState(0);
-    const navigate = useNavigate();
+    // const [productDetails, setProductDetails] = useState([]);
+    // const userAuthService = new UserAuthComponent();
+    // const [showPreviousPageButton, setShowPreviousPageButton] = useState(false);
+    // const [showNextPageButton, setShowNextPageButton] = useState(false);
+    // const [showPageNumber, setShowPageNumber] = useState(true);
+    // const [pageNumber, setPageNumber] = useState(0);
+    // const navigate = useNavigate();
 
-    const nextPage = (event) => {
-        event.preventDefault();
-        setPageNumber(pageNumber + 1);
-    }
+    // const nextPage = (event) => {
+    //     event.preventDefault();
+    //     setPageNumber(pageNumber + 1);
+    // }
     
-    const previousPage= (event) => {
-        event.preventDefault();
-        setPageNumber(pageNumber - 1);
-    }
+    // const previousPage= (event) => {
+    //     event.preventDefault();
+    //     setPageNumber(pageNumber - 1);
+    // }
     
-    const getAllProducts = useCallback(async () => {
-        if(pageNumber > 0){
-            setShowPreviousPageButton(true);
-          } else {
-            setShowPreviousPageButton(false);
-          }
-        const productService = new ProductService();
-        const imageProcessingService = new ImageProcessingService();
-        try {
-            console.log(pageNumber);
-          const productsResponse = await productService.getAllProducts(pageNumber);
-          if(productsResponse.data.length === 12) {
-            setShowNextPageButton(true);
-           } else {
-            setShowNextPageButton(false);
-            if(pageNumber === 0) {
-                setShowPageNumber(false);
-            }
-           }
+    // const getAllProducts = useCallback(async () => {
+    //     if(pageNumber > 0){
+    //         setShowPreviousPageButton(true);
+    //       } else {
+    //         setShowPreviousPageButton(false);
+    //       }
+    //     const productService = new ProductService();
+    //     const imageProcessingService = new ImageProcessingService();
+    //     try {
+    //         console.log(pageNumber);
+    //       const productsResponse = await productService.getAllProducts(pageNumber);
+    //       if(productsResponse.data.length === 12) {
+    //         setShowNextPageButton(true);
+    //        } else {
+    //         setShowNextPageButton(false);
+    //         if(pageNumber === 0) {
+    //             setShowPageNumber(false);
+    //         }
+    //        }
       
-          const productsWithImages = await Promise.all(
-            productsResponse.data.map(async (product) => {
-              const productWithImages = await imageProcessingService.createImages(product);
-              return productWithImages;
-            })
-          );
+    //       const productsWithImages = await Promise.all(
+    //         productsResponse.data.map(async (product) => {
+    //           const productWithImages = await imageProcessingService.createImages(product);
+    //           return productWithImages;
+    //         })
+    //       );
       
-          setProductDetails(productsWithImages);
-        } catch (error) {
-          console.error(error);
-        }
-      }, [pageNumber]);
+    //       setProductDetails(productsWithImages);
+    //     } catch (error) {
+    //       console.error(error);
+    //     }
+    //   }, [pageNumber]);
       
-      useEffect(() => {
-        getAllProducts();
-      }, [getAllProducts]);
+    //   useEffect(() => {
+    //     getAllProducts();
+    //   }, [getAllProducts]);
 
     return (
         <Container>
-            <div className="welcome">
+        <div className="outer-container">
+            <div className="inner-container">
+                <div className="item-container">
+                <h2>Our Lego</h2>
+                <p>Explore the best Lego in our collection!</p>
+                <button className="custom-button">Explore Lego</button>
+                </div>
+                <div className="item-container">
+                <h2>Our Trains</h2>
+                <p>Explore the best Trains in our collection!</p>
+                <button className="custom-button">Explore Trains</button>
+                </div>
+            </div>
+        </div>
+         {/*   <div className="welcome">
                 {userAuthService.isLoggedIn() && (
                     <h1>Welcome, {userAuthService.getName()} !</h1>
                 )}
@@ -140,7 +154,7 @@ export const Home = () => {
                         <button className='page-navigation-button-color' type="button"  onClick={nextPage}>{'>>'}</button>
                     )}
                 </div>
-            </div>
+            </div> */}
         </Container>
     );
 }

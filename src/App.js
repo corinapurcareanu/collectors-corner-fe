@@ -69,6 +69,8 @@ import { FeetCare } from './components/products/skincare/feet-care/feet-care';
 import { HandsCare } from './components/products/skincare/hands-care/hands-care';
 import { AccessForbidden } from './components/access.forbidden/access.forbidden';
 import ProtectedRoutes from './_auth/protected.routes';
+import {Footer} from "./components/footer/footer";
+
 import { useState } from 'react';
 
 function App() {
@@ -149,6 +151,7 @@ function App() {
               <Route path="/skin-care/face-care/face-mask" element={<FaceMask />}/>
               <Route element={<AccessForbidden />} />
             </Routes>
+            <Footer />
         </Router>
     </div>
   );
