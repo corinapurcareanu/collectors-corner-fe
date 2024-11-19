@@ -6,7 +6,7 @@ export const Footer = () => {
 
     return (
  
-        <footer className="footer">
+        <div className="footer" role="banner">
         <div className="footer-content">
           <p>&copy; 2024 Collectors Corner. All rights reserved.</p>
           <div className="footer-links">
@@ -15,6 +15,6 @@ export const Footer = () => {
             <a href="/" className="footer-link">Privacy Policy</a>
           </div>
         </div>
-      </footer>
+      </div>
     );
 };

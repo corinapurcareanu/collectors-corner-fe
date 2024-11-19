@@ -30,7 +30,7 @@
     height: 130px;
     display: flex;
     align-items: flex-start; /* Align items to the top */
-    background-color: white;
+    background-color: #f7f7f7;
     color: #333;
     font-weight: 600;
     position: fixed;
@@ -80,8 +80,9 @@
   .toolbar #shopping-logo:hover,
   .toolbar #home-logo:hover
   .toolbar #menu-logo:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
     cursor: pointer;
     font-weight: normal;
   }
@@ -91,7 +92,8 @@
     height: 40px;
     margin: 0 10px;
     text-align: right;
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
     cursor: pointer;
     font-weight: normal;
   }
@@ -125,11 +127,12 @@
     height: 40px;
     display: flex;
     background-color: whitesmoke;
-    opacity: 50%;
+    opacity: 80%;
     align-items: center;
     border-radius: 60px;
-    padding: 2px 2x;
+    padding: 2px 20px; /* Corrected '2x' to '20px' for proper horizontal padding */
     font-weight: normal;
+    border: 2px solid #333; /* Specifies border width, style, and color */
   }
 
   .search-bar input {
@@ -144,7 +147,6 @@
   .search-bar button {
     position: absolute;
     border: 0;
-    border-radius: 50%;
     cursor: pointer;
     background-color: transparent;
     font-weight: normal;
@@ -156,6 +158,40 @@
     height: 24px;
     width: auto;
     font-weight: normal;
+  }
+
+  .search-bar-small {
+    width: 70px;
+    max-height: 30px;
+    display: flex;
+    background-color: whitesmoke;
+    opacity: 80%;
+    align-items: center;
+    border-radius: 60px;
+    padding: 2px 2px;
+    display: none;
+    visibility: hidden;
+    font-weight: normal;
+    border: 2px solid #333;
+  }
+
+  .search-bar-small input {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    max-width: 15px;
+    max-height: 25px;
+    font-weight: normal;
+  }
+
+  .search-bar-small button {
+    position: absolute;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: normal;
+    top: 7px;
   }
 
   svg.material-icons:not(:last-child) {
@@ -314,39 +350,6 @@
   
   }
 
-  .search-bar-small {
-    width: 70px;
-    max-height: 30px;
-    display: flex;
-    background-color: whitesmoke;
-    opacity: 50%;
-    align-items: center;
-    border-radius: 60px;
-    padding: 2px 2x;
-    display: none;
-    visibility: hidden;
-    font-weight: normal;
-  }
-
-  .search-bar-small input {
-    background-color: transparent;
-    border: 0;
-    outline: none;
-    max-width: 15px;
-    max-height: 25px;
-    font-weight: normal;
-  }
-
-  .search-bar-small button {
-    position: absolute;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: transparent;
-    font-weight: normal;
-    top: 2px;
-  }
-
   .cart_count {
     display: inline;
     background-color: red;
@@ -379,6 +382,8 @@
     }
     .store {
       font-size: 75%;
+      display: flex;
+      position: relative;
     }
 
     .search-bar {

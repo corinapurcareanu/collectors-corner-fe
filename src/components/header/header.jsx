@@ -117,7 +117,7 @@ export const Header = ({cartCount, setCartCount}) => {
                         </div> */}
                     </div>
 
-                    <div style={{position: 'relative', display: 'inline-block', marginRight: '10px'}}>
+                    <div style={{position: 'relative', display: 'inline-block'}}>
                         {/* <Link to="cart"> */}
                         <Link to="/">
                         {location.pathname !== 'cart' ? (

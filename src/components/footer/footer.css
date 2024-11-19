@@ -1,23 +1,20 @@
 .footer {
-  background-color: white;
+  background-color: #f7f7f7;
   color: #333;
   padding: 20px 0;
   text-align: center;
   font-size: 14px;
   position: relative;
-  bottom: 0;
-  width: 100%; /* Ensure full width */
   left: 0; /* Align to the left of the viewport */
   right: 0; /* Align to the right of the viewport */
   margin: 0; /* Remove any default margin */
-  position: fixed;
+  width: 100vw; /* Ensure it spans the entire viewport width */
+  box-sizing: border-box; /* Prevent padding from affecting width */
 }
 
 .footer-content {
-  width: 100%; /* Full width of the footer */
-  padding: 0 20px; /* Optional padding to avoid touching edges */
-  max-width: none; /* Remove max-width to allow full width */
-  box-sizing: border-box; /* Include padding in width calculation */
+  margin: 0 auto; /* Center content horizontally */
+  padding: 0 20px; /* Add padding for content spacing */
 }
 
 .footer-links {
