@@ -200,6 +200,11 @@
     color: #333;
   }
 
+  .links-container {
+    position: 'relative'; 
+    display: 'inline-block';
+  }
+
   svg.material-icons:not(:last-child) {
     margin-right: 8px;
     font-weight: normal;
@@ -376,7 +381,7 @@
     vertical-align: middle; /* Align the image in line with the text */
 }
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 800px) {
     .products {
       display: none;
       visibility: hidden;
@@ -400,6 +405,19 @@
     .search-bar-small {
       display: inline-block;
       visibility: visible;
+    }
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .toolbar #home-logo,
+    .toolbar #home-logo-current,
+    .toolbar  #user-logo,
+    .toolbar  #user-logo-current,
+    .toolbar  #shopping-logo,
+    .toolbar  #shopping-logo-current {
+      height: 25px;
     }
   }
  
