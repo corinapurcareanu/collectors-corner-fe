@@ -133,6 +133,7 @@
     padding: 2px 20px; /* Corrected '2x' to '20px' for proper horizontal padding */
     font-weight: normal;
     border: 2px solid #333; /* Specifies border width, style, and color */
+    color: #333;
   }
 
   .search-bar input {
@@ -142,6 +143,7 @@
     margin-left: 10px;
     font-size: 16px;
     font-weight: normal;
+    color: #333;
   }
 
   .search-bar button {
@@ -152,6 +154,7 @@
     font-weight: normal;
     margin-left: 200px;
     margin-top: 8px;
+    color: #333;
   }
 
   svg.material-icons {
@@ -173,6 +176,7 @@
     visibility: hidden;
     font-weight: normal;
     border: 2px solid #333;
+    color: #333;
   }
 
   .search-bar-small input {
@@ -182,6 +186,7 @@
     max-width: 15px;
     max-height: 25px;
     font-weight: normal;
+    color: #333;
   }
 
   .search-bar-small button {
@@ -192,6 +197,7 @@
     background-color: transparent;
     font-weight: normal;
     top: 7px;
+    color: #333;
   }
 
   svg.material-icons:not(:last-child) {
